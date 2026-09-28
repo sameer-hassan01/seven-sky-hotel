@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Book a Stay — Seven Sky Hotel, Murree</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body data-page="book">
+<header id="nav" data-solid></header>
+
+<section class="page-head white">
+  <div class="wrap">
+    <div class="eyebrow">Reservations</div>
+    <h1>Book your <em>stay</em></h1>
+    <p class="lead">Four quick steps. Your room is held once we receive a small advance — the balance is paid when you arrive.</p>
+  </div>
+</section>
+
+<section class="sec white" style="padding-top:0" id="wizard-wrap">
+  <div class="wrap">
+    <div class="wizard" id="wizard">
+      <div>
+        <ul class="steps">
+          <li data-step="1" class="on"><i>1</i><span>Dates & room</span></li>
+          <li data-step="2"><i>2</i><span>Your details</span></li>
+          <li data-step="3"><i>3</i><span>Advance payment</span></li>
+          <li data-step="4"><i>4</i><span>Confirmation</span></li>
+        </ul>
+
+        <!-- STEP 1 -->
+        <div class="step on" data-step="1">
+          <h2>When are you <em>coming</em>?</h2>
+          <p>Choose your dates, tell us who's travelling, and pick a room.</p>
+          <div class="form-grid">
+            <div class="field"><label>Check-in</label><input type="date" name="checkin" required></div>
+            <div class="field"><label>Check-out</label><input type="date" name="checkout" required></div>
+            <div class="field"><label>Adults</label><input type="number" name="adults" min="1" max="8" value="2"></div>
+            <div class="field"><label>Children</label><input type="number" name="children" min="0" max="6" value="0"><div class="hint">Under 5 stay free in existing beds.</div></div>
+          </div>
+          <div class="eyebrow" style="margin-top:36px">Choose a room</div>
+          <div class="room-pick" id="room-pick"></div>
+          <div class="wiz-nav"><span></span><button class="btn btn-gold" data-go="2">Continue <span class="arr">→</span></button></div>
+        </div>
+
+        <!-- STEP 2 -->
+        <div class="step" data-step="2">
+          <h2>Who's <em>staying</em>?</h2>
+          <p>We'll send your confirmation to the WhatsApp number and email you enter here.</p>
+          <form class="form-grid" onsubmit="return false">
+            <div class="field"><label>Full name</label><input name="name" required placeholder="As on your CNIC / passport"></div>
+            <div class="field"><label>WhatsApp number</label><input name="phone" type="tel" required placeholder="+92 3xx xxxxxxx"></div>
+            <div class="field"><label>Email</label><input name="email" type="email" required placeholder="you@example.com"></div>
+            <div class="field"><label>CNIC / Passport (optional)</label><input name="cnic" placeholder="Speeds up check-in"></div>
+            <div class="field full"><label>Special requests</label><textarea name="requests" placeholder="Early check-in, extra bed, airport pick-up, anniversary…"></textarea></div>
+          </form>
+          <div class="wiz-nav"><button class="back" data-go="1">← Back</button><button class="btn btn-gold" data-go="3">Continue to payment <span class="arr">→</span></button></div>
+        </div>
+
+        <!-- STEP 3 -->
+        <div class="step" data-step="3">
+          <h2>Secure your <em>room</em></h2>
+          <p>Transfer the advance using any method below, then upload a screenshot or photo of the payment receipt. We verify manually and confirm within a few hours.</p>
+
+          <div class="pay-tabs">
+            <button type="button" class="on" data-m="bank">Bank transfer</button>
+            <button type="button" data-m="jazz">JazzCash</button>
+            <button type="button" data-m="easy">Easypaisa</button>
+          </div>
+          <div class="pay-pane on" data-m="bank"><div class="pay-box"><h4>Bank account details</h4>
+            <dl><dt>Bank</dt><dd>[PLACEHOLDER] Meezan Bank</dd><dt>Title</dt><dd>Seven Sky Hotel</dd><dt>Account no.</dt><dd>0000 0000 0000 0000</dd><dt>IBAN</dt><dd>PK00 MEZN 0000 0000 0000 0000</dd><dt>Amount</dt><dd id="pay-amount">—</dd><dt>Reference</dt><dd id="pay-ref">—</dd></dl></div></div>
+          <div class="pay-pane" data-m="jazz"><div class="pay-box"><h4>JazzCash</h4>
+            <dl><dt>Number</dt><dd>[PLACEHOLDER] 0300 0000000</dd><dt>Title</dt><dd>Seven Sky Hotel</dd><dt>Amount</dt><dd>See summary</dd></dl></div></div>
+          <div class="pay-pane" data-m="easy"><div class="pay-box"><h4>Easypaisa</h4>
+            <dl><dt>Number</dt><dd>[PLACEHOLDER] 0300 0000000</dd><dt>Title</dt><dd>Seven Sky Hotel</dd><dt>Amount</dt><dd>See summary</dd></dl></div></div>
+
+          <div class="eyebrow" style="margin-top:36px;margin-bottom:14px">Upload proof of payment</div>
+          <div class="upload"><b>Drop your screenshot here</b><span>or click to choose · JPG, PNG or PDF · max 10 MB</span><input type="file" id="proof" accept="image/*,.pdf"></div>
+          <label class="check"><input type="checkbox" id="agree"> I understand the advance payment is <b>non-refundable</b>, and that my booking is confirmed only after the hotel verifies the payment.</label>
+          <div class="wiz-nav"><button class="back" data-go="2">← Back</button><button class="btn btn-gold" data-go="4">Submit booking <span class="arr">→</span></button></div>
+        </div>
+
+        <!-- STEP 4 -->
+        <div class="step" data-step="4">
+          <div class="confirm">
+            <div class="ok">✓</div>
+            <div class="eyebrow center">Request received</div>
+            <div class="ref" id="conf-ref">SSH-0000</div>
+            <p>Thank you — we've received your booking request and payment proof. Our team will verify the payment and send your confirmation to <b id="conf-email">your email</b> and WhatsApp, usually within a few hours.</p>
+            <div class="next">
+              <div><b>1. Verification</b><span>Reception checks the transfer against the reference above.</span></div>
+              <div><b>2. Confirmation</b><span>You receive a confirmation message with your booking details.</span></div>
+              <div><b>3. Arrival</b><span>Pay the balance at check-in. We'll have the heating on.</span></div>
+            </div>
+            <div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap"><a class="btn btn-dark" href="index.html">Back to home</a><a class="btn btn-ink" href="https://wa.me/923001234567" target="_blank" rel="noopener">Message us on WhatsApp</a></div>
+          </div>
+        </div>
+      </div>
+
+      <aside class="summary" id="summary"></aside>
+    </div>
+  </div>
+</section>
+
+<footer id="footer"></footer>
+<script src="assets/js/data.js"></script>
+<script src="assets/js/main.js"></script>
+</body>
+</html>

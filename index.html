@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Seven Sky Hotel — More Than a View · Mall Road, Murree</title>
+<meta name="description" content="Seven Sky Hotel, Murree: a new hotel on Mall Road with balcony rooms, central heating, underground parking and The Glasshouse rooftop restaurant.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body data-page="home">
+<header id="nav"></header>
+
+<!-- ===== HERO ===== -->
+<section class="hero">
+  <div class="media"><img src="assets/img/entrance.jpg" alt="Seven Sky Hotel entrance lit up in the evening" fetchpriority="high"></div>
+  <div class="wrap">
+    <div class="eyebrow">Murree · On Mall Road</div>
+    <h1>More than <em>a view.</em></h1>
+    <p>A new hotel on Mall Road — balcony rooms facing the pines, a rooftop restaurant worth staying in for, and the kind of service that remembers your name.</p>
+    <div class="actions"><a class="btn btn-gold" href="book.html">Reserve a stay <span class="arr">→</span></a><a class="btn btn-outline" href="rooms.html">Explore rooms</a></div>
+  </div>
+  <div class="side"><div class="wx-chip" id="wx-chip"><span class="ico">🌡️</span><span class="d"><b>Murree now</b>loading…</span></div></div>
+  <div class="scroll">Scroll</div>
+</section>
+
+<!-- ===== BOOKING BAR ===== -->
+<div class="wrap book-bar">
+  <form id="book-bar" action="book.html" method="get">
+    <div class="f"><label>Check-in</label><input type="date" name="checkin" required></div>
+    <div class="f"><label>Check-out</label><input type="date" name="checkout" required></div>
+    <div class="f"><label>Adults</label><select name="adults"><option>1</option><option selected>2</option><option>3</option><option>4</option><option>5</option><option>6</option></select></div>
+    <div class="f"><label>Children</label><select name="children"><option selected>0</option><option>1</option><option>2</option><option>3</option><option>4</option></select></div>
+    <button class="btn btn-gold" type="submit">Check availability</button>
+  </form>
+</div>
+
+<!-- ===== INTRO ===== -->
+<section class="sec white">
+  <div class="wrap">
+    <div class="intro-grid">
+      <div class="frame rv"><img src="assets/img/reception.jpg" alt="Marble reception desk with the Seven Sky monogram"><div class="badge"><b>2<i>min</i></b><span>walk to the Mall</span></div></div>
+      <div class="text rv d2">
+        <div class="eyebrow">Welcome to Seven Sky</div>
+        <h2>A higher standard, in the <em>heart of Murree</em></h2>
+        <p class="lead">Murree has hotels that look like hotels. Seven Sky was built to feel like somewhere you'd choose to be: marble and walnut in the lobby, warm light in the corridors, and a balcony on every room where the valley opens up in front of you.</p>
+        <p class="lead">We're on Mall Road at Upper Jhika Gali — the promenade on your doorstep, Kashmir Point ten minutes away, and underground parking so your car never sees the snow.</p>
+        <a class="btn btn-dark" href="about.html">About the hotel <span class="arr">→</span></a>
+      </div>
+    </div>
+    <div class="stats rv">
+      <div><b>100<i>%</i></b><span>Rooms with balcony</span></div>
+      <div><b>24<i>h</i></b><span>Central heating & room service</span></div>
+      <div><b>1</b><span>Rooftop restaurant</span></div>
+      <div><b>★</b><span>Underground parking</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== ROOMS ===== -->
+<section class="sec dark" id="rooms">
+  <div class="wrap">
+    <div class="sec-head split rv"><div><div class="eyebrow">Rooms & suites</div><h2>Rest, with a <em>view</em></h2></div><a class="link" href="rooms.html">View all rooms</a></div>
+    <div class="rooms-grid" id="home-rooms"></div>
+  </div>
+</section>
+
+<!-- ===== DINING ===== -->
+<section class="duo dark-2" id="dining">
+  <div class="media rv"><div class="ph"><span>The Glasshouse — rooftop dining room (photo needed)</span></div></div>
+  <div class="text rv d2">
+    <div class="eyebrow">The Glasshouse by Seven Sky</div>
+    <h2>Rooftop dining, <em>elevated</em></h2>
+    <p class="lead">From halwa puri at breakfast to a BBQ platter after dark, our rooftop kitchen cooks the food Murree is loved for — with care, good ingredients, and a proper cup of chai, with the hills on three sides.</p>
+    <ul class="menu-list" id="home-menu"></ul>
+    <a class="btn btn-outline" href="dining.html">See the menu <span class="arr">→</span></a>
+  </div>
+</section>
+
+<!-- ===== EXPLORE ===== -->
+<section class="sec mist">
+  <div class="wrap">
+    <div class="sec-head center rv"><div class="eyebrow center">Explore Murree</div><h2>Everything is <em>close</em></h2><p class="lead">The Mall is on your doorstep, the viewpoints are ten minutes away, and the hill stations beyond are an easy morning's drive.</p></div>
+    <div class="explore-grid rv" id="explore"></div>
+  </div>
+</section>
+
+<!-- ===== WEATHER ===== -->
+<section class="sec dark" id="weather">
+  <div class="wrap">
+    <div class="sec-head split rv"><div><div class="eyebrow">Live weather</div><h2>Plan around the <em>mountain</em></h2></div><p class="lead" style="max-width:40ch">Real-time conditions in Murree with a 7-day rain and snow outlook — so you know what to pack and when to leave Islamabad.</p></div>
+    <div class="wx rv">
+      <div class="wx-now" id="wx-now"><div class="eyebrow">Live · Murree</div><p style="margin-top:20px">Loading current conditions…</p></div>
+      <div><div class="wx-days" id="wx-days"></div><div class="wx-alert" id="wx-alert">Checking the forecast…</div><div class="wx-note">Source: Open-Meteo · Updated hourly · Murree, 33.9°N 73.4°E</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== REVIEWS ===== -->
+<section class="sec white" id="reviews">
+  <div class="wrap">
+    <div class="sec-head split rv"><div><div class="eyebrow">Guest reviews</div><h2>What guests <em>say</em></h2></div>
+      <div class="rating-summary"><div class="num">4.8</div><div><div class="stars">★★★★★</div><small>132 reviews on Google</small></div></div></div>
+    <div class="reviews-grid" id="home-reviews"></div>
+    <div class="center" style="margin-top:40px"><a class="link" href="reviews.html">Read all reviews</a></div>
+  </div>
+</section>
+
+<!-- ===== LOCATION ===== -->
+<section class="loc ivory" id="location">
+  <div class="map"><iframe title="Map" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=Seven+Sky+Hotel+Abid+Majeed+Road+Murree&output=embed"></iframe></div>
+  <div class="text rv">
+    <div class="eyebrow">Find us</div>
+    <address>Upper Jhika Gali,<br>Mall Road,<br>Murree</address>
+    <dl>
+      <dt>From Islamabad</dt><dd>≈ 60 km · 1.5–2 hrs via the Murree Expressway</dd>
+      <dt>On the Mall</dt><dd>The hotel sits on Mall Road itself</dd>
+      <dt>Reception</dt><dd><a href="tel:+92513411412">+92 51 3411412</a></dd>
+      <dt>Parking</dt><dd>Free underground parking</dd>
+    </dl>
+    <div><a class="btn btn-dark" href="https://www.google.com/maps/search/?api=1&query=Seven+Sky+Hotel+Abid+Majeed+Road+Murree" target="_blank" rel="noopener">Get directions <span class="arr">→</span></a></div>
+  </div>
+</section>
+
+<!-- ===== CTA ===== -->
+<section class="cta">
+  <div class="bg"><img src="assets/img/entrance-wide.jpg" alt=""></div>
+  <div class="wrap rv">
+    <div class="eyebrow center" style="color:var(--champagne)">Reserve</div>
+    <h2>Your balcony in the hills is <em>waiting</em></h2>
+    <p class="lead" style="margin:0 auto;color:rgba(255,255,255,.75)">Secure your room with a small advance — pay by bank transfer, JazzCash or Easypaisa, and we'll confirm on WhatsApp.</p>
+    <div class="actions"><a class="btn btn-gold" href="book.html">Book now <span class="arr">→</span></a><a class="btn btn-outline" href="https://wa.me/923001234567" target="_blank" rel="noopener">WhatsApp us</a></div>
+  </div>
+</section>
+
+<footer id="footer"></footer>
+<script src="assets/js/data.js"></script>
+<script src="assets/js/main.js"></script>
+</body>
+</html>

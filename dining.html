@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Glasshouse — Rooftop Restaurant · Seven Sky Hotel, Murree</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css">
+<style>
+  .menu-sec{padding:48px 0;border-top:1px solid var(--line)}
+  .menu-sec h3{font-size:clamp(30px,3.4vw,44px);margin:12px 0 24px}
+  .menu-sec .menu-list li .dots{border-color:var(--line)}
+  .menu-sec .menu-list li span:last-child{color:var(--champagne-2)}
+  .chef{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+  @media(max-width:700px){.chef{grid-template-columns:1fr}}
+  .chef div{background:var(--slate-2);border:1px solid var(--line-dark);padding:30px 26px}
+  .chef b{font-family:var(--serif);font-size:26px;font-weight:500;display:block;margin:8px 0 6px;color:#fff}
+  .chef span{font-size:10px;letter-spacing:.26em;text-transform:uppercase;color:var(--champagne)}
+  .chef p{font-size:13px}
+  .hours{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line);margin-top:40px}
+  @media(max-width:600px){.hours{grid-template-columns:1fr}}
+  .hours div{background:#fff;padding:24px;text-align:center}
+  .hours b{font-family:var(--serif);font-size:24px;font-weight:500;display:block}
+  .hours span{font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--ink-2)}
+</style>
+</head>
+<body data-page="dining">
+<header id="nav"></header>
+
+<section class="hero inner">
+  <div class="media"><div class="ph" style="position:absolute;inset:0"><span>The Glasshouse — rooftop at dinner (photo needed)</span></div></div>
+  <div class="wrap"><div class="eyebrow">The Glasshouse by Seven Sky</div><h1>Rooftop dining, <em>elevated</em></h1><p>Glass on three sides and the hills on every one of them. Open to guests and visitors, from an early breakfast to a late dinner — Pakistani classics, continental favourites and proper chai.</p></div>
+</section>
+
+<section class="sec dark">
+  <div class="wrap">
+    <div class="sec-head split rv"><div><div class="eyebrow">Chef's recommendation</div><h2>What to <em>order</em></h2></div><p class="lead" style="max-width:40ch">Every dish is prepared with care by our culinary team, using the finest local ingredients — a tradition of warm hospitality, elevated.</p></div>
+    <div class="chef rv">
+      <div><span>Signature</span><b>B.B.Q Platter</b><p>Malai boti, seekh kabab and chicken tikka off the grill, with naan, raita and salad.</p></div>
+      <div><span>House special</span><b>Special Makhni Karahi</b><p>Slow-cooked chicken in a rich, buttery tomato gravy — made for sharing.</p></div>
+      <div><span>Dessert</span><b>Shahi Tukda</b><p>Fried bread soaked in saffron milk, topped with pistachio and almonds.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec white">
+  <div class="wrap">
+    <div class="two">
+      <div>
+        <div class="eyebrow">Menu highlights</div>
+        <h2 style="font-size:clamp(34px,4vw,54px);margin:14px 0 10px">A taste of the <em>menu</em></h2>
+        <p class="lead">A selection from our full menu. Prices in PKR; a 10% service charge applies.</p>
+        <div class="notice">Breakfast prices are from the printed menu. High tea and dinner prices are placeholders until the hotel confirms. The full menu can be added as a downloadable PDF or as complete sections here.</div>
+        <div class="hours"><div><b>7:30 – 11:00</b><span>Breakfast</span></div><div><b>16:00 – 19:00</b><span>High tea</span></div><div><b>19:00 – 23:00</b><span>Dinner</span></div></div>
+      </div>
+      <div id="menu"></div>
+    </div>
+  </div>
+</section>
+
+<section class="duo ivory">
+  <div class="text rv" style="color:var(--ink)">
+    <div class="eyebrow">Private dining & events</div>
+    <h2 style="color:var(--ink)">Celebrations, <em>catered</em></h2>
+    <p class="lead">Birthday dinners, anniversaries, corporate retreats and family gatherings — The Glasshouse can be reserved in part or in full, rooftop and all. Tell us the occasion and we'll plan the menu.</p>
+    <a class="btn btn-dark" href="https://wa.me/923001234567" target="_blank" rel="noopener">Enquire on WhatsApp <span class="arr">→</span></a>
+  </div>
+  <div class="media rv d2"><div class="ph"><span>Private dining / event setup (photo needed)</span></div></div>
+</section>
+
+<footer id="footer"></footer>
+<script src="assets/js/data.js"></script>
+<script src="assets/js/main.js"></script>
+</body>
+</html>
