@@ -1,55 +1,68 @@
-# Seven Sky Hotel — front-end prototype
+# Seven Sky Hotel — website
 
-Static HTML/CSS/JS. No build step: open `index.html` in a browser, or serve the folder
-(`python -m http.server 8000` inside `site/`) — serving is needed for the live weather
-fetch and the Google Maps embed to work in some browsers.
+**Live preview:** https://sameer-hassan01.github.io/seven-sky-hotel/
+
+Static HTML/CSS/JS — no build step. Open `index.html`, or serve the folder
+(`python -m http.server 8000`) so the live weather and map embed work.
 
 ## Pages
 
 | File | Purpose |
 |---|---|
-| `index.html` | Home — hero, booking bar, intro, rooms, dining, explore Murree, live weather, reviews, map, CTA |
-| `rooms.html` | All room types |
-| `room.html?room=<slug>` | Room detail (slugs: `standard`, `deluxe`, `executive`, `family`) |
-| `book.html` | 4-step reservation: dates & room → guest details → advance payment + proof upload → confirmation. Accepts `?room=&checkin=&checkout=&adults=&children=` |
-| `dining.html` | Restaurant, chef's picks, menu highlights, hours, private dining |
+| `index.html` | Home — hero, booking bar, intro, rooms, The Glasshouse, explore Murree, live weather, reviews, map |
+| `rooms.html` | All four room types |
+| `room.html?room=<slug>` | Room detail — `deluxe`, `premium-deluxe`, `executive`, `premium-executive` |
+| `book.html` | 4-step reservation: dates & room → guest details → advance payment + proof upload → confirmation |
+| `dining.html` | The Glasshouse by Seven Sky — rooftop restaurant, chef's picks, menu, hours |
 | `gallery.html` | Filterable gallery with lightbox |
-| `reviews.html` | Google-style reviews + moderated "write a review" form (both options shown) |
+| `reviews.html` | Google-style reviews + moderated submission form |
 | `faqs.html` | Accordion FAQs |
-| `about.html` | Story, facilities, directions/map, policies, contact form |
+| `about.html` | Story, facilities, directions, policies, contact |
 
-Shared: `assets/css/style.css` (design tokens + all components), `assets/js/data.js`
-(all content — rooms, menu, reviews, FAQs, gallery), `assets/js/main.js` (nav/footer,
-weather via Open-Meteo, chat widget, page renderers, booking wizard).
+All content lives in `assets/js/data.js` — rooms, menu, reviews, FAQs, gallery
+and hotel details are edited there, in one place.
 
-## What is real vs placeholder
+## Confirmed by the hotel
 
-**Real (from the hotel's own material / listings):** name, tagline "Above the Ordinary.",
-7S monogram (approximated in SVG — needs the vector file), address, reception phone,
-Instagram handle, domain, 3 photos (entrance, reception, deluxe room), breakfast menu
-prices, chef's recommendations, 10% service charge, palette + fonts from the brand board,
-live Murree weather.
+- **Tagline:** "More than a view."
+- **Address:** Upper Jhika Gali, Mall Road, Murree (from the business registration)
+- **Founded:** 13 January 2026
+- **Rooms:** Deluxe · Premium Deluxe · Executive · Premium Executive
+- **Restaurant:** The Glasshouse by Seven Sky (rooftop)
+- **Facilities:** underground parking, central heating, rooftop dining
+- **Distances:** Kashmir Point 10 min · Pindi Point 10 min · Bhurban 20 min ·
+  Patriata 30 min · Nathiagali 45 min
 
-**Placeholder — confirm with the hotel:** everything tagged `[PLACEHOLDER]` in `data.js`,
-`book.html` and `about.html`:
+## Still needed before launch
 
-- WhatsApp number, reservations email
-- Room types, sizes, bed configs, occupancy, nightly rates (currently 12k / 16k / 22k / 28k PKR)
-- Advance percentage (set to 15%; requirement says 10–15%)
+**Photography is the biggest gap.** Every tile marked with a camera icon is a
+placeholder. The Glasshouse has no real photo at all, and only one of the four
+room types does. A shoot covering the rooftop restaurant, all four room types,
+the balconies and the underground parking would lift the whole site.
+
+Also outstanding, all tagged `[PLACEHOLDER]` in `data.js`:
+
+- Room sizes, occupancy and **nightly rates** (currently indicative)
+- Advance percentage (set to 15%; brief said 10–15%)
 - Bank / JazzCash / Easypaisa account details
-- Check-out time (listings say 1:00 PM; site says 11:00 AM)
-- High tea and dinner prices; restaurant hours
-- Review texts and the 4.8 / 132 rating
-- Opening year, "family-run"
-- Exact Google Maps pin (two Tripadvisor listings give different roads)
+- WhatsApp number and reservations email
+- Check-out time (site says 11:00 AM; listings say 1:00 PM)
+- Guest review texts and the 4.8 / 132 rating
+- Logo vector file (the monogram is currently redrawn as SVG)
+- High tea and dinner menu prices (breakfast prices are from the printed menu)
 
-**Photos needed:** every tile marked with a camera icon — restaurant (hall, dishes),
-standard room, executive suite, family suite, balcony view / mist, snowfall, rooftop, Mall
-Road at night, Patriata. Ideally a proper shoot: blue-hour exterior, morning rooms, dinner service.
+**One conflict to resolve:** the business registration gives *Upper Jhika Gali,
+Mall Road*, while the printed menu gives *Abid Majeed Road, near GPO Chowk*. The
+site currently uses the registered address — please confirm which one guests
+should be given.
 
 ## Not yet wired (backend phase)
 
-- Reservation submission + payment-proof storage + admin verification
-- Reviews: either Google Places API pull (option 1) or moderation queue (option 2)
-- AI assistant: currently keyword-matched canned answers; to be replaced with the RAG bot
-- Contact form and review form submissions
+- Reservation submission, payment-proof storage, admin verification
+- Reviews: either Google Places API (live) or a moderation queue
+- AI concierge: currently keyword-matched answers, to be replaced with the RAG bot
+- Contact and review form submissions
+
+## Deployment
+
+Hosted on GitHub Pages from `main`. Any push to `main` republishes automatically.
